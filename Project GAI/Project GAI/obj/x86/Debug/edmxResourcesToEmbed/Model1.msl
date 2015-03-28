@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GAIModelStoreContainer" CdmEntityContainer="GAIEntities">
+    <EntitySetMapping Name="BodyTypeClassifications">
+      <EntityTypeMapping TypeName="GAIModel.BodyTypeClassification">
+        <MappingFragment StoreEntitySet="BodyTypeClassifications">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BodyTypes">
+      <EntityTypeMapping TypeName="GAIModel.BodyType">
+        <MappingFragment StoreEntitySet="BodyTypes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="BodyTypeClassificationsId" ColumnName="BodyTypeClassificationsId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Countries">
+      <EntityTypeMapping TypeName="GAIModel.Country">
+        <MappingFragment StoreEntitySet="Countries">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FinesTypes">
+      <EntityTypeMapping TypeName="GAIModel.FinesType">
+        <MappingFragment StoreEntitySet="FinesTypes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Produsers">
+      <EntityTypeMapping TypeName="GAIModel.Produser">
+        <MappingFragment StoreEntitySet="Produsers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RightsTypes">
+      <EntityTypeMapping TypeName="GAIModel.RightsType">
+        <MappingFragment StoreEntitySet="RightsTypes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CarOwner">
+      <EntityTypeMapping TypeName="GAIModel.CarOwner">
+        <MappingFragment StoreEntitySet="CarOwner">
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="CarId" ColumnName="CarId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OwnerFines">
+      <EntityTypeMapping TypeName="GAIModel.OwnerFine">
+        <MappingFragment StoreEntitySet="OwnerFines">
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="FineTypeId" ColumnName="FineTypeId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cars">
+      <EntityTypeMapping TypeName="GAIModel.Car">
+        <MappingFragment StoreEntitySet="Cars">
+          <ScalarProperty Name="NumberChassis" ColumnName="NumberChassis" />
+          <ScalarProperty Name="NumberEngine" ColumnName="NumberEngine" />
+          <ScalarProperty Name="NumberBody" ColumnName="NumberBody" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="PlaceRegId" ColumnName="PlaceRegId" />
+          <ScalarProperty Name="ModelId" ColumnName="ModelId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rights">
+      <EntityTypeMapping TypeName="GAIModel.Right">
+        <MappingFragment StoreEntitySet="Rights">
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="RightTypeId" ColumnName="RightTypeId" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Owners">
+      <EntityTypeMapping TypeName="GAIModel.Owner">
+        <MappingFragment StoreEntitySet="Owners">
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Models">
+      <EntityTypeMapping TypeName="GAIModel.Model">
+        <MappingFragment StoreEntitySet="Models">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="BodyTypesId" ColumnName="BodyTypesId" />
+          <ScalarProperty Name="ProduserId" ColumnName="ProduserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

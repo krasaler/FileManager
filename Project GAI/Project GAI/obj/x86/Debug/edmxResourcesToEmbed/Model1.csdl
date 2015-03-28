@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GAIModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityContainer Name="GAIEntities" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+    <EntitySet Name="BodyTypeClassifications" EntityType="GAIModel.BodyTypeClassification" />
+    <EntitySet Name="BodyTypes" EntityType="GAIModel.BodyType" />
+    <EntitySet Name="Countries" EntityType="GAIModel.Country" />
+    <EntitySet Name="FinesTypes" EntityType="GAIModel.FinesType" />
+    <EntitySet Name="Produsers" EntityType="GAIModel.Produser" />
+    <EntitySet Name="RightsTypes" EntityType="GAIModel.RightsType" />
+    <AssociationSet Name="FK__BodyTypes__BodyT__0CBAE877" Association="GAIModel.FK__BodyTypes__BodyT__0CBAE877">
+      <End Role="BodyTypeClassifications" EntitySet="BodyTypeClassifications" />
+      <End Role="BodyTypes" EntitySet="BodyTypes" />
+    </AssociationSet>
+    <EntitySet Name="CarOwner" EntityType="GAIModel.CarOwner" />
+    <EntitySet Name="OwnerFines" EntityType="GAIModel.OwnerFine" />
+    <AssociationSet Name="FK__OwnerFine__FineT__300424B4" Association="GAIModel.FK__OwnerFine__FineT__300424B4">
+      <End Role="FinesType" EntitySet="FinesTypes" />
+      <End Role="OwnerFines" EntitySet="OwnerFines" />
+    </AssociationSet>
+    <EntitySet Name="Cars" EntityType="GAIModel.Car" />
+    <AssociationSet Name="FK__CarOwner__CarId__29572725" Association="GAIModel.FK__CarOwner__CarId__29572725">
+      <End Role="Cars" EntitySet="Cars" />
+      <End Role="CarOwner" EntitySet="CarOwner" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Cars__CountryId__1920BF5C" Association="GAIModel.FK__Cars__CountryId__1920BF5C">
+      <End Role="Country" EntitySet="Countries" />
+      <End Role="Cars" EntitySet="Cars" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Cars__PlaceRegId__173876EA" Association="GAIModel.FK__Cars__PlaceRegId__173876EA">
+      <End Role="Country" EntitySet="Countries" />
+      <End Role="Cars" EntitySet="Cars" />
+    </AssociationSet>
+    <EntitySet Name="Rights" EntityType="GAIModel.Right" />
+    <AssociationSet Name="FK__Rights__RightTyp__35BCFE0A" Association="GAIModel.FK__Rights__RightTyp__35BCFE0A">
+      <End Role="RightsType" EntitySet="RightsTypes" />
+      <End Role="Rights" EntitySet="Rights" />
+    </AssociationSet>
+    <EntitySet Name="Owners" EntityType="GAIModel.Owner" />
+    <AssociationSet Name="FK__CarOwner__OwnerI__2A4B4B5E" Association="GAIModel.FK__CarOwner__OwnerI__2A4B4B5E">
+      <End Role="Owners" EntitySet="Owners" />
+      <End Role="CarOwner" EntitySet="CarOwner" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OwnerFine__Owner__2F10007B" Association="GAIModel.FK__OwnerFine__Owner__2F10007B">
+      <End Role="Owners" EntitySet="Owners" />
+      <End Role="OwnerFine" EntitySet="OwnerFines" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Rights__OwnerId__34C8D9D1" Association="GAIModel.FK__Rights__OwnerId__34C8D9D1">
+      <End Role="Owners" EntitySet="Owners" />
+      <End Role="Right" EntitySet="Rights" />
+    </AssociationSet>
+    <EntitySet Name="Models" EntityType="GAIModel.Model" />
+    <AssociationSet Name="FK__Models__BodyType__1DE57479" Association="GAIModel.FK__Models__BodyType__1DE57479">
+      <End Role="BodyType" EntitySet="BodyTypes" />
+      <End Role="Models" EntitySet="Models" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Cars__ModelId__267ABA7A" Association="GAIModel.FK__Cars__ModelId__267ABA7A">
+      <End Role="Models" EntitySet="Models" />
+      <End Role="Car" EntitySet="Cars" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Models__Produser__1CF15040" Association="GAIModel.FK__Models__Produser__1CF15040">
+      <End Role="Produser" EntitySet="Produsers" />
+      <End Role="Models" EntitySet="Models" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="BodyTypeClassification">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="BodyTypes" Relationship="GAIModel.FK__BodyTypes__BodyT__0CBAE877" FromRole="BodyTypeClassifications" ToRole="BodyTypes" />
+  </EntityType>
+  <EntityType Name="BodyType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="BodyTypeClassificationsId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="BodyTypeClassifications" Relationship="GAIModel.FK__BodyTypes__BodyT__0CBAE877" FromRole="BodyTypes" ToRole="BodyTypeClassifications" />
+    <NavigationProperty Name="Models" Relationship="GAIModel.FK__Models__BodyType__1DE57479" FromRole="BodyType" ToRole="Models" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Cars" Relationship="GAIModel.FK__Cars__CountryId__1920BF5C" FromRole="Country" ToRole="Cars" />
+    <NavigationProperty Name="Cars1" Relationship="GAIModel.FK__Cars__PlaceRegId__173876EA" FromRole="Country" ToRole="Cars" />
+  </EntityType>
+  <EntityType Name="FinesType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="500" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="OwnerFines" Relationship="GAIModel.FK__OwnerFine__FineT__300424B4" FromRole="FinesType" ToRole="OwnerFines" />
+  </EntityType>
+  <EntityType Name="Produser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Models" Relationship="GAIModel.FK__Models__Produser__1CF15040" FromRole="Produser" ToRole="Models" />
+  </EntityType>
+  <EntityType Name="RightsType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="4" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Rights" Relationship="GAIModel.FK__Rights__RightTyp__35BCFE0A" FromRole="RightsType" ToRole="Rights" />
+  </EntityType>
+  <Association Name="FK__BodyTypes__BodyT__0CBAE877">
+    <End Role="BodyTypeClassifications" Type="GAIModel.BodyTypeClassification" Multiplicity="1" />
+    <End Role="BodyTypes" Type="GAIModel.BodyType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BodyTypeClassifications">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BodyTypes">
+        <PropertyRef Name="BodyTypeClassificationsId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="CarOwner">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="CarId" Nullable="false" />
+    <Property Type="Int32" Name="OwnerId" Nullable="false" />
+    <Property Type="DateTime" Name="Data" Nullable="false" />
+    <NavigationProperty Name="Cars" Relationship="GAIModel.FK__CarOwner__CarId__29572725" FromRole="CarOwner" ToRole="Cars" />
+    <NavigationProperty Name="Owners" Relationship="GAIModel.FK__CarOwner__OwnerI__2A4B4B5E" FromRole="CarOwner" ToRole="Owners" />
+  </EntityType>
+  <EntityType Name="OwnerFine">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="FineTypeId" Nullable="false" />
+    <Property Type="Int32" Name="OwnerId" Nullable="false" />
+    <NavigationProperty Name="FinesTypes" Relationship="GAIModel.FK__OwnerFine__FineT__300424B4" FromRole="OwnerFines" ToRole="FinesType" />
+    <NavigationProperty Name="Owners" Relationship="GAIModel.FK__OwnerFine__Owner__2F10007B" FromRole="OwnerFine" ToRole="Owners" />
+  </EntityType>
+  <Association Name="FK__OwnerFine__FineT__300424B4">
+    <End Type="GAIModel.FinesType" Role="FinesType" Multiplicity="1" />
+    <End Type="GAIModel.OwnerFine" Role="OwnerFines" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FinesType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OwnerFines">
+        <PropertyRef Name="FineTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Car">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="ModelId" Nullable="false" />
+    <Property Type="Int32" Name="PlaceRegId" Nullable="false" />
+    <Property Type="Int32" Name="CountryId" Nullable="false" />
+    <Property Type="Decimal" Name="NumberBody" Nullable="false" Precision="10" Scale="0" />
+    <Property Type="Decimal" Name="NumberEngine" Nullable="false" Precision="10" Scale="0" />
+    <Property Type="Decimal" Name="NumberChassis" Nullable="false" Precision="10" Scale="0" />
+    <NavigationProperty Name="CarOwner" Relationship="GAIModel.FK__CarOwner__CarId__29572725" FromRole="Cars" ToRole="CarOwner" />
+    <NavigationProperty Name="Countries" Relationship="GAIModel.FK__Cars__CountryId__1920BF5C" FromRole="Cars" ToRole="Country" />
+    <NavigationProperty Name="Countries1" Relationship="GAIModel.FK__Cars__PlaceRegId__173876EA" FromRole="Cars" ToRole="Country" />
+    <NavigationProperty Name="Models" Relationship="GAIModel.FK__Cars__ModelId__267ABA7A" FromRole="Car" ToRole="Models" />
+  </EntityType>
+  <Association Name="FK__CarOwner__CarId__29572725">
+    <End Type="GAIModel.Car" Role="Cars" Multiplicity="1" />
+    <End Type="GAIModel.CarOwner" Role="CarOwner" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cars">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CarOwner">
+        <PropertyRef Name="CarId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Cars__CountryId__1920BF5C">
+    <End Type="GAIModel.Country" Role="Country" Multiplicity="1" />
+    <End Type="GAIModel.Car" Role="Cars" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Cars">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Cars__PlaceRegId__173876EA">
+    <End Type="GAIModel.Country" Role="Country" Multiplicity="1" />
+    <End Type="GAIModel.Car" Role="Cars" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Cars">
+        <PropertyRef Name="PlaceRegId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Right">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="OwnerId" Nullable="false" />
+    <Property Type="Int32" Name="RightTypeId" Nullable="false" />
+    <Property Type="DateTime" Name="Data" Nullable="false" />
+    <NavigationProperty Name="RightsTypes" Relationship="GAIModel.FK__Rights__RightTyp__35BCFE0A" FromRole="Rights" ToRole="RightsType" />
+    <NavigationProperty Name="Owners" Relationship="GAIModel.FK__Rights__OwnerId__34C8D9D1" FromRole="Right" ToRole="Owners" />
+  </EntityType>
+  <Association Name="FK__Rights__RightTyp__35BCFE0A">
+    <End Type="GAIModel.RightsType" Role="RightsType" Multiplicity="1" />
+    <End Type="GAIModel.Right" Role="Rights" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RightsType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Rights">
+        <PropertyRef Name="RightTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Owner">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LastName" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MiddleName" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Adres" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CarOwner" Relationship="GAIModel.FK__CarOwner__OwnerI__2A4B4B5E" FromRole="Owners" ToRole="CarOwner" />
+    <NavigationProperty Name="OwnerFines" Relationship="GAIModel.FK__OwnerFine__Owner__2F10007B" FromRole="Owners" ToRole="OwnerFine" />
+    <NavigationProperty Name="Rights" Relationship="GAIModel.FK__Rights__OwnerId__34C8D9D1" FromRole="Owners" ToRole="Right" />
+  </EntityType>
+  <Association Name="FK__CarOwner__OwnerI__2A4B4B5E">
+    <End Type="GAIModel.Owner" Role="Owners" Multiplicity="1" />
+    <End Type="GAIModel.CarOwner" Role="CarOwner" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Owners">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CarOwner">
+        <PropertyRef Name="OwnerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OwnerFine__Owner__2F10007B">
+    <End Type="GAIModel.Owner" Role="Owners" Multiplicity="1" />
+    <End Type="GAIModel.OwnerFine" Role="OwnerFine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Owners">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OwnerFine">
+        <PropertyRef Name="OwnerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Rights__OwnerId__34C8D9D1">
+    <End Type="GAIModel.Owner" Role="Owners" Multiplicity="1" />
+    <End Type="GAIModel.Right" Role="Right" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Owners">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Right">
+        <PropertyRef Name="OwnerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Model">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="ProduserId" Nullable="false" />
+    <Property Type="Int32" Name="BodyTypesId" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="BodyTypes" Relationship="GAIModel.FK__Models__BodyType__1DE57479" FromRole="Models" ToRole="BodyType" />
+    <NavigationProperty Name="Cars" Relationship="GAIModel.FK__Cars__ModelId__267ABA7A" FromRole="Models" ToRole="Car" />
+    <NavigationProperty Name="Produsers" Relationship="GAIModel.FK__Models__Produser__1CF15040" FromRole="Models" ToRole="Produser" />
+  </EntityType>
+  <Association Name="FK__Models__BodyType__1DE57479">
+    <End Type="GAIModel.BodyType" Role="BodyType" Multiplicity="1" />
+    <End Type="GAIModel.Model" Role="Models" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BodyType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Models">
+        <PropertyRef Name="BodyTypesId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Cars__ModelId__267ABA7A">
+    <End Type="GAIModel.Model" Role="Models" Multiplicity="1" />
+    <End Type="GAIModel.Car" Role="Car" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Models">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Car">
+        <PropertyRef Name="ModelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Models__Produser__1CF15040">
+    <End Type="GAIModel.Produser" Role="Produser" Multiplicity="1" />
+    <End Type="GAIModel.Model" Role="Models" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Produser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Models">
+        <PropertyRef Name="ProduserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

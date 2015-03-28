@@ -1,0 +1,37 @@
+C:\Users\Александр\Documents\Visual Studio 2013\Projects\Project GAI\Project GAI\bin\Debug\SqlServerTypes\x64\msvcr100.dll
+C:\Users\Александр\Documents\Visual Studio 2013\Projects\Project GAI\Project GAI\bin\Debug\SqlServerTypes\x64\SqlServerSpatial110.dll
+C:\Users\Александр\Documents\Visual Studio 2013\Projects\Project GAI\Project GAI\bin\Debug\SqlServerTypes\x86\msvcr100.dll
+C:\Users\Александр\Documents\Visual Studio 2013\Projects\Project GAI\Project GAI\bin\Debug\SqlServerTypes\x86\SqlServerSpatial110.dll
+C:\Users\Александр\Documents\Visual Studio 2013\Projects\Project GAI\Project GAI\bin\Debug\Project GAI.exe.config
+C:\Users\Александр\Documents\Visual Studio 2013\Projects\Project GAI\Project GAI\bin\Debug\Project GAI.exe
+C:\Users\Александр\Documents\Visual Studio 2013\Projects\Project GAI\Project GAI\bin\Debug\Project GAI.pdb
+C:\Users\Александр\Documents\Visual Studio 2013\Projects\Project GAI\Project GAI\bin\Debug\EntityFramework.dll
+C:\Users\Александр\Documents\Visual Studio 2013\Projects\Project GAI\Project GAI\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Александр\Documents\Visual Studio 2013\Projects\Project GAI\Project GAI\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Александр\Documents\Visual Studio 2013\Projects\Project GAI\Project GAI\bin\Debug\Microsoft.ReportViewer.DataVisualization.DLL
+C:\Users\Александр\Documents\Visual Studio 2013\Projects\Project GAI\Project GAI\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\Александр\Documents\Visual Studio 2013\Projects\Project GAI\Project GAI\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Александр\Documents\Visual Studio 2013\Projects\Project GAI\Project GAI\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\Александр\Documents\Visual Studio 2013\Projects\Project GAI\Project GAI\bin\Debug\EntityFramework.xml
+C:\Users\Александр\Documents\Visual Studio 2013\Projects\Project GAI\Project GAI\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Александр\Documents\Visual Studio 2013\Projects\Project GAI\Project GAI\obj\x86\Debug\Project GAI.csprojResolveAssemblyReference.cache
+C:\Users\Александр\Documents\Visual Studio 2013\Projects\Project GAI\Project GAI\obj\x86\Debug\ProjectGAI.CarIU.resources
+C:\Users\Александр\Documents\Visual Studio 2013\Projects\Project GAI\Project GAI\obj\x86\Debug\ProjectGAI.CarOwnerIU.resources
+C:\Users\Александр\Documents\Visual Studio 2013\Projects\Project GAI\Project GAI\obj\x86\Debug\ProjectGAI.Form1.resources
+C:\Users\Александр\Documents\Visual Studio 2013\Projects\Project GAI\Project GAI\obj\x86\Debug\ProjectGAI.Reports.resources
+C:\Users\Александр\Documents\Visual Studio 2013\Projects\Project GAI\Project GAI\obj\x86\Debug\ProjectGAI.ModelIU.resources
+C:\Users\Александр\Documents\Visual Studio 2013\Projects\Project GAI\Project GAI\obj\x86\Debug\ProjectGAI.OwnerFineIU.resources
+C:\Users\Александр\Documents\Visual Studio 2013\Projects\Project GAI\Project GAI\obj\x86\Debug\ProjectGAI.OwnerIU.resources
+C:\Users\Александр\Documents\Visual Studio 2013\Projects\Project GAI\Project GAI\obj\x86\Debug\ProjectGAI.Properties.Resources.resources
+C:\Users\Александр\Documents\Visual Studio 2013\Projects\Project GAI\Project GAI\obj\x86\Debug\ProjectGAI.RightIU.resources
+C:\Users\Александр\Documents\Visual Studio 2013\Projects\Project GAI\Project GAI\obj\x86\Debug\Project GAI.csproj.GenerateResource.Cache
+C:\Users\Александр\Documents\Visual Studio 2013\Projects\Project GAI\Project GAI\obj\x86\Debug\RdlCompile.cache
+C:\Users\Александр\Documents\Visual Studio 2013\Projects\Project GAI\Project GAI\obj\x86\Debug\RdlCompile.compiled
+C:\Users\Александр\Documents\Visual Studio 2013\Projects\Project GAI\Project GAI\obj\x86\Debug\Project GAI.exe
+C:\Users\Александр\Documents\Visual Studio 2013\Projects\Project GAI\Project GAI\obj\x86\Debug\Project GAI.pdb
+C:\Users\Александр\Documents\Visual Studio 2013\Projects\Project GAI\Project GAI\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+C:\Users\Александр\Documents\Visual Studio 2013\Projects\Project GAI\Project GAI\bin\Debug\Microsoft.ReportViewer.Design.DLL
+C:\Users\Александр\Documents\Visual Studio 2013\Projects\Project GAI\Project GAI\bin\Debug\Microsoft.ReportViewer.WebDesign.DLL
+D:\Рабочие файлы\Разработка\Проекты\C#\Project GAI\Project GAI\bin\Debug\Project GAI.exe.config
+D:\Рабочие файлы\Разработка\Проекты\C#\Project GAI\Project GAI\obj\x86\Debug\Project GAI.exe
+D:\Рабочие файлы\Разработка\Проекты\C#\Project GAI\Project GAI\obj\x86\Debug\Project GAI.pdb
