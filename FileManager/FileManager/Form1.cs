@@ -76,11 +76,13 @@ namespace FileManager
         {
             if (file1.Hiden)
             {
+                hidenFilesOnofToolStripMenuItem.Text = "Hiden files OFF";
                 file1.Hiden = false;
                 file2.Hiden = false;
             }
             else
             {
+                hidenFilesOnofToolStripMenuItem.Text = "Hiden files ON";
                 file1.Hiden = true;
                 file2.Hiden = true;
             }

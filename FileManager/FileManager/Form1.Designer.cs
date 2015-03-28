@@ -32,9 +32,13 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.file1 = new FileManager.FileItems();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.drive1 = new FileManager.DriveSelect();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.file2 = new FileManager.FileItems();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.drive2 = new FileManager.DriveSelect();
             this.panel6 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,10 +52,6 @@
             this.hostToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.file1 = new FileManager.FileItems();
-            this.drive1 = new FileManager.DriveSelect();
-            this.file2 = new FileManager.FileItems();
-            this.drive2 = new FileManager.DriveSelect();
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -115,6 +115,17 @@
             this.panel4.Size = new System.Drawing.Size(367, 397);
             this.panel4.TabIndex = 3;
             // 
+            // file1
+            // 
+            this.file1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.file1.Hiden = false;
+            this.file1.Location = new System.Drawing.Point(0, 0);
+            this.file1.Name = "file1";
+            this.file1.path = "C:\\\\";
+            this.file1.Size = new System.Drawing.Size(367, 397);
+            this.file1.TabIndex = 0;
+            this.file1.KeyItem += new FileManager.FileItems.KeyItemDelegate(this.fileItem_KeyItem);
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.drive1);
@@ -123,6 +134,16 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(367, 23);
             this.panel3.TabIndex = 2;
+            // 
+            // drive1
+            // 
+            this.drive1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.drive1.Drive = "C:\\";
+            this.drive1.Location = new System.Drawing.Point(0, 0);
+            this.drive1.Name = "drive1";
+            this.drive1.Size = new System.Drawing.Size(367, 23);
+            this.drive1.TabIndex = 0;
+            this.drive1.TabStop = false;
             // 
             // panel5
             // 
@@ -133,6 +154,17 @@
             this.panel5.Size = new System.Drawing.Size(362, 397);
             this.panel5.TabIndex = 2;
             // 
+            // file2
+            // 
+            this.file2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.file2.Hiden = false;
+            this.file2.Location = new System.Drawing.Point(0, 0);
+            this.file2.Name = "file2";
+            this.file2.path = "D:\\\\";
+            this.file2.Size = new System.Drawing.Size(362, 397);
+            this.file2.TabIndex = 0;
+            this.file2.KeyItem += new FileManager.FileItems.KeyItemDelegate(this.fileItem_KeyItem);
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.drive2);
@@ -141,6 +173,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(362, 23);
             this.panel1.TabIndex = 1;
+            // 
+            // drive2
+            // 
+            this.drive2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.drive2.Drive = "C:\\";
+            this.drive2.Location = new System.Drawing.Point(0, 0);
+            this.drive2.Name = "drive2";
+            this.drive2.Size = new System.Drawing.Size(362, 23);
+            this.drive2.TabIndex = 0;
+            this.drive2.TabStop = false;
             // 
             // panel6
             // 
@@ -188,8 +230,8 @@
             // hidenFilesOnofToolStripMenuItem
             // 
             this.hidenFilesOnofToolStripMenuItem.Name = "hidenFilesOnofToolStripMenuItem";
-            this.hidenFilesOnofToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
-            this.hidenFilesOnofToolStripMenuItem.Text = "Hiden files On/of";
+            this.hidenFilesOnofToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.hidenFilesOnofToolStripMenuItem.Text = "Hiden files OFF";
             this.hidenFilesOnofToolStripMenuItem.Click += new System.EventHandler(this.hidenFilesOnofToolStripMenuItem_Click);
             // 
             // jumpToolStripMenuItem
@@ -200,7 +242,7 @@
             this.startMenuToolStripMenuItem,
             this.hostToolStripMenuItem});
             this.jumpToolStripMenuItem.Name = "jumpToolStripMenuItem";
-            this.jumpToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.jumpToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.jumpToolStripMenuItem.Text = "Jump";
             // 
             // appDataToolStripMenuItem
@@ -242,48 +284,6 @@
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
-            // 
-            // file1
-            // 
-            this.file1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.file1.Hiden = false;
-            this.file1.Location = new System.Drawing.Point(0, 0);
-            this.file1.Name = "file1";
-            this.file1.path = "C:\\\\";
-            this.file1.Size = new System.Drawing.Size(367, 397);
-            this.file1.TabIndex = 0;
-            this.file1.KeyItem += new FileManager.FileItems.KeyItemDelegate(this.fileItem_KeyItem);
-            // 
-            // drive1
-            // 
-            this.drive1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.drive1.Drive = "C:\\";
-            this.drive1.Location = new System.Drawing.Point(0, 0);
-            this.drive1.Name = "drive1";
-            this.drive1.Size = new System.Drawing.Size(367, 23);
-            this.drive1.TabIndex = 0;
-            this.drive1.TabStop = false;
-            // 
-            // file2
-            // 
-            this.file2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.file2.Hiden = false;
-            this.file2.Location = new System.Drawing.Point(0, 0);
-            this.file2.Name = "file2";
-            this.file2.path = "D:\\\\";
-            this.file2.Size = new System.Drawing.Size(362, 397);
-            this.file2.TabIndex = 0;
-            this.file2.KeyItem += new FileManager.FileItems.KeyItemDelegate(this.fileItem_KeyItem);
-            // 
-            // drive2
-            // 
-            this.drive2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.drive2.Drive = "C:\\";
-            this.drive2.Location = new System.Drawing.Point(0, 0);
-            this.drive2.Name = "drive2";
-            this.drive2.Size = new System.Drawing.Size(362, 23);
-            this.drive2.TabIndex = 0;
-            this.drive2.TabStop = false;
             // 
             // Form1
             // 
