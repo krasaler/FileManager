@@ -1,0 +1,11 @@
+d:\Рабочие файлы\Разработка\Проекты\C#\FileManager\FileManager\bin\Debug\FileManager.exe.config
+d:\Рабочие файлы\Разработка\Проекты\C#\FileManager\FileManager\bin\Debug\FileManager.exe
+d:\Рабочие файлы\Разработка\Проекты\C#\FileManager\FileManager\bin\Debug\FileManager.pdb
+d:\Рабочие файлы\Разработка\Проекты\C#\FileManager\FileManager\obj\Debug\FileManager.DriveSelect.resources
+d:\Рабочие файлы\Разработка\Проекты\C#\FileManager\FileManager\obj\Debug\FileManager.FileItems.resources
+d:\Рабочие файлы\Разработка\Проекты\C#\FileManager\FileManager\obj\Debug\FileManager.Form1.resources
+d:\Рабочие файлы\Разработка\Проекты\C#\FileManager\FileManager\obj\Debug\FileManager.Properties.Resources.resources
+d:\Рабочие файлы\Разработка\Проекты\C#\FileManager\FileManager\obj\Debug\FileManager.csproj.GenerateResource.Cache
+d:\Рабочие файлы\Разработка\Проекты\C#\FileManager\FileManager\obj\Debug\FileManager.exe
+d:\Рабочие файлы\Разработка\Проекты\C#\FileManager\FileManager\obj\Debug\FileManager.pdb
+D:\Рабочие файлы\Разработка\Проекты\C#\FileManager\FileManager\obj\Debug\FileManager.csprojResolveAssemblyReference.cache
