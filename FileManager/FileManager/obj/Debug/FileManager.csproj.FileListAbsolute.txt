@@ -9,3 +9,6 @@ d:\Рабочие файлы\Разработка\Проекты\C#\FileManager\
 d:\Рабочие файлы\Разработка\Проекты\C#\FileManager\FileManager\obj\Debug\FileManager.exe
 d:\Рабочие файлы\Разработка\Проекты\C#\FileManager\FileManager\obj\Debug\FileManager.pdb
 D:\Рабочие файлы\Разработка\Проекты\C#\FileManager\FileManager\obj\Debug\FileManager.csprojResolveAssemblyReference.cache
+D:\Repository\MyRepository\FileManager\FileManager\bin\Debug\FileManager.exe.config
+D:\Repository\MyRepository\FileManager\FileManager\obj\Debug\FileManager.exe
+D:\Repository\MyRepository\FileManager\FileManager\obj\Debug\FileManager.pdb
