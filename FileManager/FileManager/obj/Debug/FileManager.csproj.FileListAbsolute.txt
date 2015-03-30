@@ -20,3 +20,6 @@ D:\Repository\MyRepository\FileManager\FileManager\obj\Debug\FileManager.FileIte
 D:\Repository\MyRepository\FileManager\FileManager\obj\Debug\FileManager.Form1.resources
 D:\Repository\MyRepository\FileManager\FileManager\obj\Debug\FileManager.Properties.Resources.resources
 D:\Repository\MyRepository\FileManager\FileManager\obj\Debug\FileManager.csproj.GenerateResource.Cache
+C:\Users\Александр\Documents\GitHub\MyRepository\FileManager\FileManager\bin\Debug\FileManager.exe.config
+C:\Users\Александр\Documents\GitHub\MyRepository\FileManager\FileManager\obj\Debug\FileManager.exe
+C:\Users\Александр\Documents\GitHub\MyRepository\FileManager\FileManager\obj\Debug\FileManager.pdb
